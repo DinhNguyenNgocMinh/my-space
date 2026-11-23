@@ -1,0 +1,140 @@
+:root {
+  color-scheme: dark;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: #030919;
+  color: #dff6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 16% 16%, rgba(38, 103, 184, 0.28), transparent 25rem),
+    radial-gradient(circle at 83% 80%, rgba(89, 52, 168, 0.22), transparent 28rem),
+    #030919;
+}
+
+.running-page {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: clamp(2rem, 7vw, 6rem) 1.5rem;
+}
+
+.home-link {
+  position: absolute;
+  top: clamp(1.25rem, 3vw, 2.5rem);
+  left: clamp(1.25rem, 4vw, 4rem);
+  color: #c9efff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.4px #8bd7ff;
+  text-shadow: 0 0 0.7rem rgba(82, 186, 255, 0.68);
+  transition: color 160ms ease-out, transform 160ms ease-out, text-shadow 160ms ease-out;
+}
+
+.home-link:hover,
+.home-link:focus-visible {
+  color: #ffffff;
+  outline: none;
+  text-shadow: 0 0 0.25rem #ffffff, 0 0 0.9rem #4bb8ff;
+  transform: translateX(0.2rem);
+}
+
+.personal-records {
+  width: min(100%, 70rem);
+}
+
+.section-label {
+  margin: 0 0 0.6rem;
+  color: #91d9ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+}
+
+h1 {
+  margin: 0;
+  color: transparent;
+  font-size: clamp(2.5rem, 6vw, 5.4rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 0.98;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #b9eaff;
+  text-shadow: 0 0 0.18em rgba(224, 249, 255, 0.88), 0 0 0.7em rgba(70, 175, 255, 0.52);
+}
+
+.record-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.35rem);
+  margin-top: clamp(2rem, 5vw, 4.5rem);
+}
+
+.record-card {
+  position: relative;
+  min-height: 10.5rem;
+  padding: 1.4rem;
+  overflow: hidden;
+  border: 1px solid rgba(164, 222, 255, 0.3);
+  border-radius: 1.25rem;
+  background: linear-gradient(145deg, rgba(22, 61, 100, 0.7), rgba(10, 17, 49, 0.84));
+  box-shadow: inset 0 0 1.4rem rgba(123, 203, 255, 0.08), 0 0 1.8rem rgba(54, 152, 235, 0.13);
+}
+
+.record-card::before {
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #beeaff, transparent);
+  box-shadow: 0 0 0.5rem #73caff;
+  content: "";
+}
+
+.record-card h2,
+.record-card p {
+  margin: 0;
+}
+
+.record-card h2 {
+  color: #a6e4ff;
+  font-size: clamp(1rem, 1.7vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.record-card p {
+  margin-top: 2.4rem;
+  color: #ffffff;
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  font-weight: 800;
+  text-shadow: 0 0 0.5em rgba(128, 211, 255, 0.6);
+}
+
+@media (max-width: 720px) {
+  .record-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .record-card {
+    min-height: 8.8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .record-grid {
+    grid-template-columns: 1fr;
+  }
+}
