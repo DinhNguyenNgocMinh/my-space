@@ -1,0 +1,47 @@
+:root {
+  color-scheme: dark;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: #030919;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 16% 16%, rgba(38, 103, 184, 0.28), transparent 25rem),
+    radial-gradient(circle at 83% 80%, rgba(89, 52, 168, 0.22), transparent 28rem),
+    #030919;
+}
+
+.empty-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.home-link {
+  position: absolute;
+  top: clamp(1.25rem, 3vw, 2.5rem);
+  left: clamp(1.25rem, 4vw, 4rem);
+  color: #c9efff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.4px #8bd7ff;
+  text-shadow: 0 0 0.7rem rgba(82, 186, 255, 0.68);
+  transition: color 160ms ease-out, transform 160ms ease-out, text-shadow 160ms ease-out;
+}
+
+.home-link:hover,
+.home-link:focus-visible {
+  color: #ffffff;
+  outline: none;
+  text-shadow: 0 0 0.25rem #ffffff, 0 0 0.9rem #4bb8ff;
+  transform: translateX(0.2rem);
+}
